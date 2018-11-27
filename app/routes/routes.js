@@ -10,4 +10,10 @@ module.exports = (app) => {
     // Delete event with  eventId
     app.delete('/events/:eventId', event.delete);
 
- }
+    // Retrieve a single Event with channel name
+    app.get('/channels/:channel', event.findByChannelName);
+
+    app.get('/tags/:tag', event.findByTag);
+
+
+}

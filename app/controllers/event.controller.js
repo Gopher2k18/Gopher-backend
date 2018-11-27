@@ -9,6 +9,7 @@ exports.create = (req, res) => {
         });
     }
 
+
     // Create a Note
     const event = new Event({
         user: req.body.user || "Unnamed User", 
@@ -59,6 +60,29 @@ exports.delete = (req, res) => {
         }
         return res.status(500).send({
             message: "Could not delete event with id " + req.params.eventId
+        });
+    });
+};
+
+// Retrieve and return all events from the database.
+exports.findByChannelName = (req, res) => {
+    Event.find({channel: req.params.channel})
+    .then(events => {
+        res.send(events);
+    }).catch(err => {
+        res.status(500).send({
+            message: err.message || "Some error occurred while retrieving events."
+        });
+    });
+};
+
+exports.findByTag = (req, res) => {
+    Event.find({tags: req.params.tag})
+    .then(events => {
+        res.send(events);
+    }).catch(err => {
+        res.status(500).send({
+            message: err.message || "Some error occurred while retrieving events."
         });
     });
 };
