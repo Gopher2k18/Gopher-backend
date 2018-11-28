@@ -1,10 +1,10 @@
 module.exports = (app) => {
     const event = require('../controllers/event.controller.js');
 
-    // Create a new Note
+    // Create a new event
     app.post('/events', event.create);
 
-    // Retrieve all Notes
+    // Retrieve all event
     app.get('/events', event.findAll);
 
     // Delete event with  eventId
@@ -13,7 +13,16 @@ module.exports = (app) => {
     // Retrieve a single Event with channel name
     app.get('/channels/:channel', event.findByChannelName);
 
+    //Retrieve events with tag
     app.get('/tags/:tag', event.findByTag);
 
-
+    // Retrieve all blogs
+    app.get('/blogs', event.findAllBlogs);
+    
 }
+/*module.exports = (app) => {
+    const blog = require('../controllers/blog.controller.js');
+
+    // Retrieve all blogs
+    app.get('/blogs', blog.findAllBlogs);
+}*/

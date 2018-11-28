@@ -88,3 +88,17 @@ exports.findByTag = (req, res) => {
 };
 
 
+// Retrieve and return all blogs from the database.
+exports.findAllBlogs = (req, res) => {
+    Event.find()
+    .then(events => {
+        res.send(events);
+    }).catch(err => {
+        res.status(500).send({
+            message: err.message || "Some error occurred while retrieving events."
+        });
+    });
+};
+
+
+
