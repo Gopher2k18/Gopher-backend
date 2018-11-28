@@ -1,4 +1,5 @@
 const Event = require('../models/message-model.js');
+const Blog = require('../models/blog-model.js');
 
 // Create and Save a new Event
 exports.create = (req, res) => {
@@ -87,18 +88,16 @@ exports.findByTag = (req, res) => {
     });
 };
 
-
 // Retrieve and return all blogs from the database.
 exports.findAllBlogs = (req, res) => {
-    Event.find()
+    Blog.find()
     .then(events => {
         res.send(events);
     }).catch(err => {
         res.status(500).send({
-            message: err.message || "Some error occurred while retrieving events."
+            message: err.message || "Some error occurred while retrieving blogs."
         });
     });
 };
-
 
 

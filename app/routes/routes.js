@@ -20,9 +20,3 @@ module.exports = (app) => {
     app.get('/blogs', event.findAllBlogs);
     
 }
-/*module.exports = (app) => {
-    const blog = require('../controllers/blog.controller.js');
-
-    // Retrieve all blogs
-    app.get('/blogs', blog.findAllBlogs);
-}*/
