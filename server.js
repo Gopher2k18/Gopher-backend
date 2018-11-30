@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 app.use('/gopher', express.static('./gopher'));
 
 app.get('/gopher/*', (req, res) => {
-    res.sendFile('gopher/index.html');
+    res.sendFile('./gopher/index.html');
   });
 
 // Configuring the database
