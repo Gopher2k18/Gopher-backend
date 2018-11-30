@@ -1,4 +1,5 @@
 const Event = require('../models/message-model.js');
+const Blog = require('../models/blog-model.js');
 
 // Create and Save a new Event
 exports.create = (req, res) => {
@@ -8,6 +9,7 @@ exports.create = (req, res) => {
             message: "Message content can not be empty"
         });
     }
+
 
     // Create a Note
     const event = new Event({
@@ -59,6 +61,41 @@ exports.delete = (req, res) => {
         }
         return res.status(500).send({
             message: "Could not delete event with id " + req.params.eventId
+        });
+    });
+};
+
+// Retrieve and return all events from the database.
+exports.findByChannelName = (req, res) => {
+    Event.find({channel: req.params.channel})
+    .then(events => {
+        res.send(events);
+    }).catch(err => {
+        res.status(500).send({
+            message: err.message || "Some error occurred while retrieving events."
+        });
+    });
+};
+
+exports.findByTag = (req, res) => {
+    Event.find({tags: req.params.tag})
+    .then(events => {
+        res.send(events);
+    }).catch(err => {
+        res.status(500).send({
+            message: err.message || "Some error occurred while retrieving events."
+        });
+    });
+};
+
+// Retrieve and return all blogs from the database.
+exports.findAllBlogs = (req, res) => {
+    Blog.find()
+    .then(events => {
+        res.send(events);
+    }).catch(err => {
+        res.status(500).send({
+            message: err.message || "Some error occurred while retrieving blogs."
         });
     });
 };
