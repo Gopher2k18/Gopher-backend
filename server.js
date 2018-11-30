@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // parse application/json
 app.use(bodyParser.json())
 
-app.use('/', express.static('./gopher'));
+app.use('/gopher', express.static('./gopher'));
 
 // app.get('/gopher/*', (req, res) => {
 //     res.sendFile(__dirname + 'gopher/index.html');
