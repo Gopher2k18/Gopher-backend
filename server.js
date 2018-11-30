@@ -17,7 +17,6 @@ app.use('/gopher', express.static('./gopher'));
 
 app.get('/gopher/*', (req, res) => {
     res.sendFile(__dirname + 'gopher/index.html');
-    res.sendFile()
   });
 
 // Configuring the database
