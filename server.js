@@ -13,6 +13,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // parse application/json
 app.use(bodyParser.json())
 
+app.use('/gopher', express.static('gopher'))
+
 // Configuring the database
 const dbConfig = require('./config/config.js');
 const mongoose = require('mongoose');
