@@ -15,6 +15,10 @@ app.use(bodyParser.json())
 
 app.use('/gopher', express.static('./gopher'));
 
+app.get('/gopher/*', (req, res) => {
+    res.sendFile('gopher/index.html');
+  });
+
 // Configuring the database
 const dbConfig = require('./config/config.js');
 const mongoose = require('mongoose');
