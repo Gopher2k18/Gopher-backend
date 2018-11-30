@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // parse application/json
 app.use(bodyParser.json())
 
-app.use(express.static(path.join(__dirname, 'gopher')));
+app.use(express.static('./gopher'));
 
 // Configuring the database
 const dbConfig = require('./config/config.js');
