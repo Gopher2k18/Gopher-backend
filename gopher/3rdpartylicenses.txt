@@ -473,9 +473,9 @@ MIT
 
 @angular/material/button
 
-@angular/material/toolbar
-
 @angular/material/menu
+
+@angular/material/toolbar
 
 ng-fullcalendar
 MIT
