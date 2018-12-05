@@ -6,8 +6,7 @@ Make sure you've got to follow installed:
 * [Node.JS + npm](https://nodejs.org/en/download/)
 * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-  
-  Make sure your mongodb is running
+  Start your mongodb service
   ```
     sudo service mongod start
    ```
