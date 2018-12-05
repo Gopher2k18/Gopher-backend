@@ -1,7 +1,7 @@
 const Event = require('../models/message-model.js');
 const Blog = require('../models/blog-model.js');
 
-// Create and Save a new Event
+// Create and Save a new Event.
 exports.create = (req, res) => {
     // Validate request
     if(!req.body.message) {
@@ -10,17 +10,15 @@ exports.create = (req, res) => {
         });
     }
 
-
-    // Create a Note
+    // Create a Event.
     const event = new Event({
         user: req.body.user || "Unnamed User", 
         message: req.body.message,
         channel: req.body.channel,
         tags: req.body.tags
-
     });
 
-    // Save Event in the database
+    // Save Event in the database.
     event.save()
     .then(data => {
         res.send(data);
@@ -43,7 +41,7 @@ exports.findAll = (req, res) => {
     });
 };
 
-// Delete a event with the specified EventId in the request
+// Delete a event with the specified EventId in the request.
 exports.delete = (req, res) => {
     Event.findByIdAndRemove(req.params.eventId)
     .then(event => {
@@ -76,7 +74,7 @@ exports.findByChannelName = (req, res) => {
         });
     });
 };
-
+// retrieve and return events which include spesific tag.
 exports.findByTag = (req, res) => {
     Event.find({tags: req.params.tag})
     .then(events => {
