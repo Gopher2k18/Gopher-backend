@@ -8,7 +8,7 @@ Make sure you've got installed to followed:
 
   Start your mongodb service
   ```
-    sudo service mongod start
+    systemctl start mongodb
    ```
     
   then start mongo
