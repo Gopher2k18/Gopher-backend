@@ -6,20 +6,27 @@ Make sure you've got to follow installed:
 * [Node.JS + npm](https://nodejs.org/en/download/)
 * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-  ```
-  # Make sure your mongodb is running
-    sudo service mongod start
-    
-  # then
-    mongo
-   
-  # Open new terminal and clone this repository
-    git clone https://github.com/Gopher2k18/gopher-backend.git
-    
-  # Go to gopher-backend folder and Install dependencies
-    npm install
   
-  # Run
+  Make sure your mongodb is running
+  ```
+    sudo service mongod start
+   ```
+    
+  then start mongo
+  ```
+    mongo
+  ```
+  
+  Open new terminal and clone this repository
+  ```
+    git clone https://github.com/Gopher2k18/gopher-backend.git
+  ```
+  Go to gopher-backend folder and Install dependencies
+  ```
+  npm install
+  ```
+  Run
+  ```
     nodemon i
   ```
   If all of that succeed you should see to follow text in your terminal
