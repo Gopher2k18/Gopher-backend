@@ -31,8 +31,8 @@ Make sure you've got installed to followed:
   If all of that succeed you should see to follow text in your terminal
   
   ``` 
-  "Server is listening on port 3000 
-  Successfully connected to the database"
+  Server is listening on port 3000
+  Successfully connected to the database
   ```
 Also you should see "welcome" message when you open http://localhost:3000
 
