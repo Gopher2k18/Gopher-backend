@@ -1,7 +1,7 @@
 # gopher-backend
 This is backend of our school project. Purpose of this backend is to fetch data from our database. It uses Node.js, express, and mongoDB(Running on MLab).
 # Running
-Make sure you've got to follow installed:
+Make sure you've got installed to followed:
 * [MongoDB](https://docs.mongodb.com/manual/installation/)
 * [Node.JS + npm](https://nodejs.org/en/download/)
 * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
